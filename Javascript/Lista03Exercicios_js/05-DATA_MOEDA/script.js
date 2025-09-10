@@ -14,12 +14,12 @@ document.write(`Valor formatado em ingles: ${conversaoEN} <br> <br>`)
 
 
 
-const conversaoBRL = compraInternacional.toLocaleString("BRL", {
+const conversaoBRL = compraInternacional.toLocaleString("pt-BR", {
   style: "currency",
   currency: "BRL"
 });
 
-document.write(`Valor convertido para o real brasileiro: ${conversaoBRL}`);
+document.write(`Valor formatado para o real brasileiro: ${conversaoBRL}`);
 
 
 dataAtual.setDate(dataAtual.getDate() + 12);
