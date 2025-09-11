@@ -14,6 +14,19 @@ app.get("/", (req, res) => {
     res.render("index");
 });
 
+app.get("/produtos", (req, res) => {
+    res.render("produtos");
+});
+
+app.get("/clientes", (req, res) => {
+    res.render("clientes");
+});
+
+
+app.get("/index", (req, res) => {
+    res.render("index");
+});
+
 //Rota produtos
 app.get("/produtos", (req, res) => {
     res.send("<h1>Bem vindo a pagina de produtos!</h1>");
