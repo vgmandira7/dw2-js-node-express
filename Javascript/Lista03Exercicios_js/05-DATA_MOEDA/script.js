@@ -12,9 +12,10 @@ const conversaoEN = compraInternacional.toLocaleString("en", {
 
 document.write(`Valor formatado em ingles: ${conversaoEN} <br> <br>`)
 
+const taxaCambio = 5.40; 
+const valorEmReais = compraInternacional * taxaCambio;
 
-
-const conversaoBRL = compraInternacional.toLocaleString("pt-BR", {
+const conversaoBRL = valorEmReais.toLocaleString("pt-BR", {
   style: "currency",
   currency: "BRL"
 });
