@@ -31,7 +31,7 @@ const ano = dataAtual.getFullYear();
 
 const dataFormatada = `${dia}/${mes}/${ano}`;
 
-document.write(`<p>Data de entrega: ${dataFormatada}</p>`)
+document.write(`<p>Data de entrega: ${dataFormatada}</p>`);
 
 
 

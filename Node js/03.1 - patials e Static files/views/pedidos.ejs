@@ -1,0 +1,25 @@
+<%- include ('partials/header.ejs') %>
+    <h2>Pagina pedidos</h2>
+
+    <table class="table table-bordered table-hover table-striped">
+        <thead class="table-secondary">
+            <th>Numero</th>
+            <th>Produto</th>
+            <th>Valor Pedido</th>
+        </thead>
+        <tbody>
+             <% pedidos.forEach(pedido => { %>
+                <tr>
+                    <td><%= pedido.numero %></td>
+                    <td><%= pedido.produto %></td>
+                    <td><%= pedido.valorPedido %></td>
+                </tr>
+             <% }) %>
+            <tr>
+
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="/">Voltar</a>
+<%- include ('partials/footer.ejs') %>

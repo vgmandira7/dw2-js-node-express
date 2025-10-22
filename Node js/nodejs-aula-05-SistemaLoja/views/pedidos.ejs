@@ -1,0 +1,67 @@
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/navbar.ejs') %>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h1>Cadastrar Pedidos</h1>
+            </div>
+            <div class="card-body">
+                <!-- formulario -->
+                 <form action="/pedidos/new" method="post">
+                    <label>Número do pedido</label>
+                    <input type="text" name="numero" placeholder="Insira o numero do pedido" class="form-control" required>
+                    <label>Valor do pedido</label>
+                    <input type="text" name="valor" placeholder="Insira o valor do pedido" class="form-control" required>
+                    <input type="submit" class="btn btn-success" value="cadastrar">
+                    <input type="reset" class="btn btn-danger" value="limpar">
+                 </form>
+            </div>
+        </div>
+    </div>    
+
+
+
+
+
+ <div class="container">
+            <div class="card">
+                <div class="card-header">
+                    <h1>Pedidos</h1>
+                </div>
+                <div class="card-body">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Numero:</th>
+                                <th>Valor:</th>
+                                
+                                <th colspan="2" style="text-align: center;">Ações:</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% pedidos.forEach(pedido=> { %>
+                                <tr>
+                                    <td><img src="imgs/avatar.png" width="30px"></td>
+                                    <td>
+                                        <%= pedido.numero %>
+                                    </td>
+                                    <td>
+                                        <%= pedido.valor %>
+                                    </td>
+                                    <td>
+                                        <a href="/pedidos/edit/<%= pedido.id %>"><Button class="btn btn-warning">Editar</Button></a>
+                                    </td>
+                                    <td>
+                                        <a href="/pedidos/delete/<%= pedido.id %>"><Button onclick="return confirm('Deseja mesmo excluir o pedido <%= pedido.numero%>?')" class="btn btn-danger">Excluir</Button></a>
+                                    </td>
+                                </tr>
+                                <% }) %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+<%- include ('partials/footer.ejs') %>
