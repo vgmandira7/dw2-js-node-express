@@ -1,0 +1,48 @@
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/navbar.ejs', { activeLink: 'filmes' }) %>
+
+<div class="main-content">
+  <div class="card all-movies-card">
+    <div class="card-header-movies">
+      <h2>Todos os Filmes (<%= filmes.length %>)</h2>
+    </div>
+    <div class="card-body">
+      <div class="movie-list-header">
+        <div class="header-item header-titulo">Título</div>
+        <div class="header-item header-diretor">Diretor</div>
+        <div class="header-item header-ano">Ano</div>
+        <div class="header-item header-genero">Gênero</div>
+        <div class="header-item header-duracao">Duração</div>
+        <div class="header-item header-avaliacao">Avaliação</div>
+      </div>
+      <ul class="movie-items-list">
+        <% filmes.forEach((filme, index) => { %>
+          <li class="movie-item-row">
+            <div class="movie-cell movie-title">
+              <span class="movie-index"><%= index + 1 %></span>
+              <span><%= filme.titulo %></span>
+            </div>
+            <div class="movie-cell movie-director">
+              <span><%= filme.diretor %></span>
+            </div>
+            <div class="movie-cell movie-year">
+              <span><%= filme.ano %></span>
+            </div>
+            <div class="movie-cell movie-genre">
+              <span class="genre-tag <%= filme.genero.toLowerCase().replace(' ', '-') %>"><%= filme.genero %></span>
+            </div>
+            <div class="movie-cell movie-duration">
+              <span><%= filme.duracao %></span>
+            </div>
+            <div class="movie-cell movie-rating">
+              <i class="fas fa-star"></i>
+              <span><%= filme.avaliacao %></span>
+            </div>
+          </li>
+        <% }) %>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<%- include ('partials/footer.ejs') %>

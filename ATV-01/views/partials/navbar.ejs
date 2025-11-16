@@ -1,0 +1,30 @@
+<nav class="navbar">
+  <div class="logo">
+    <a href="/">
+      <img src="/imgs/logo.png" alt="CineDash Logo">
+      
+    </a>
+  </div>
+  <ul class="nav-links">
+    <li>
+      <a href="/" class="<%= activeLink === 'dashboard' ? 'active' : '' %>">
+        <i class="fas fa-home"></i> Dashboard
+      </a>
+    </li>
+    <li>
+      <a href="/filmes" class="<%= activeLink === 'filmes' ? 'active' : '' %>">
+        <i class="fas fa-film"></i> Filmes
+      </a>
+    </li>
+    <li>
+      <a href="/atores" class="<%= activeLink === 'atores' ? 'active' : '' %>">
+        <i class="fas fa-user-friends"></i> Atores
+      </a>
+    </li>
+    <li>
+      <a href="/generos" class="<%= activeLink === 'generos' ? 'active' : '' %>">
+        <i class="fas fa-tag"></i> Gêneros
+      </a>
+    </li>
+  </ul>
+</nav>

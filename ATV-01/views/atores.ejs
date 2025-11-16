@@ -1,0 +1,43 @@
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/navbar.ejs', { activeLink: 'atores' }) %>
+
+<div class="main-content">
+  <div class="card all-actors-card">
+    <div class="card-header-actors">
+      <h2>Todos os Atores (<%= atores.length %>)</h2>
+    </div>
+    <div class="card-body">
+      <div class="actor-list-header">
+        <div class="header-item header-nome">Nome</div>
+        <div class="header-item header-ano">Ano de Nascimento</div>
+        <div class="header-item header-nacionalidade">Nacionalidade</div>
+        <div class="header-item header-obras">Obras Notáveis</div>
+        <div class="header-item header-premios">Prêmios</div>
+      </div>
+      <ul class="actor-items-list">
+        <% atores.forEach(ator => { %>
+          <li class="actor-item-row">
+            <div class="actor-cell actor-nome">
+              <span><%= ator.nome %></span>
+            </div>
+            <div class="actor-cell actor-ano">
+              <span><%= ator.anoNasc %></span>
+            </div>
+            <div class="actor-cell actor-nacionalidade">
+              <span class="nacionalidade-tag"><%= ator.nacionalidade %></span>
+            </div>
+            <div class="actor-cell actor-obras">
+              <span><%= ator.obras %></span>
+            </div>
+            <div class="actor-cell actor-premios">
+              <i class="fas fa-trophy"></i>
+              <span><%= ator.premios %></span>
+            </div>
+          </li>
+        <% }) %>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<%- include ('partials/footer.ejs') %>  
