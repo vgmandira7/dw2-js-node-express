@@ -1,0 +1,29 @@
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/navbar.ejs', { activeLink: 'generos' }) %>
+
+<div class="main-content">
+  <div class="card all-genres-card">
+    <div class="card-header-genres">
+      <h2>Todos os Gêneros (<%= generos.length %>)</h2>
+    </div>
+    <div class="card-body genres-grid">
+      <% generos.forEach(genero => { %>
+        <div class="genre-card">
+          <div class="genre-icon">
+            <i class="fas fa-tag"></i>
+          </div>
+          <div class="genre-info">
+            <h3><%= genero.nome %></h3>
+            <p><%= genero.filmes %> filmes</p>
+            <div class="genre-rating">
+              <i class="fas fa-star"></i>
+              <span><%= genero.mediaAvaliacao %></span>
+            </div>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</div>
+
+<%- include ('partials/footer.ejs') %>

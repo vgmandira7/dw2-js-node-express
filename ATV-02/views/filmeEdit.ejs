@@ -1,0 +1,70 @@
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/navbar.ejs', { activeLink: 'filmes' }) %>
+
+<div class="main-content">
+
+    <div class="edit-card">
+        <h2 class="edit-title">Editar Filme</h2>
+
+        <form method="POST" action="/filmes/update/<%= filme.id %>" class="edit-form">
+
+            <!-- Título -->
+            <div class="form-group">
+                <label>Título:</label>
+                <input type="text" name="titulo" value="<%= filme.titulo %>" required>
+            </div>
+
+            <!-- Diretor -->
+            <div class="form-group">
+                <label>Diretor:</label>
+                <input type="text" name="diretor" value="<%= filme.diretor %>" required>
+            </div>
+
+            <!-- Ano -->
+            <div class="form-group">
+                <label>Ano:</label>
+                <input type="number" name="ano" value="<%= filme.ano %>" required>
+            </div>
+
+            <!-- Gênero -->
+            <div class="form-group">
+                <label>Gênero:</label>
+                <input type="text" name="genero" value="<%= filme.genero %>" required>
+            </div>
+
+            <!-- Duração -->
+            <div class="form-group">
+                <label>Duração (min):</label>
+                <input type="number" name="duracao" value="<%= filme.duracao %>" required>
+            </div>
+
+            <!-- Avaliação -->
+            <div class="form-group">
+                <label>Avaliação (0–10):</label>
+                <input 
+                    type="number" 
+                    name="avaliacao" 
+                    step="0.1" 
+                    min="0" 
+                    max="10" 
+                    value="<%= filme.avaliacao %>" 
+                    required
+                >
+            </div>
+
+            <input type="hidden" name="id" value="<%= filme.id %>">
+
+            <button 
+                type="submit" 
+                class="btn-save-edit"
+                onclick="return confirm('Confirmar alterações para o filme <%= filme.titulo %>?')"
+            >
+                Salvar Alterações
+            </button>
+
+        </form>
+    </div>
+
+</div>
+
+<%- include ('partials/footer.ejs') %>

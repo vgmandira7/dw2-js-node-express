@@ -1,0 +1,113 @@
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/navbar.ejs') %>
+
+<div class="dashboard-container">
+  <div class="dashboard-header">
+    <h1>Dashboard de Filmes</h1>
+    <p>Visão geral da sua coleção cinematográfica</p>
+  </div>
+
+  <div class="stats-cards">
+    <div class="stat-card">
+      <div class="stat-content">
+        <p>Total de Filmes</p>
+        <h2>7</h2>
+      </div>
+      <div class="stat-icon-red">
+        <i class="fas fa-film"></i>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-content">
+        <p>Total de Atores</p>
+        <h2>6</h2>
+      </div>
+      <div class="stat-icon-blue">
+        <i class="fas fa-user-friends"></i>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-content">
+        <p>Gêneros</p>
+        <h2>6</h2>
+      </div>
+      <div class="stat-icon-purple">
+        <i class="fas fa-tags"></i>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-content">
+        <p>Média de Avaliação</p>
+        <h2>9.0</h2>
+      </div>
+      <div class="stat-icon-pink">
+        <i class="fas fa-chart-line"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="top-movies-section">
+    <h3>Top 5 Filmes Mais Bem Avaliados</h3>
+    <ul class="movie-list">
+      <li class="movie-item">
+        <div class="movie-rank-icon rank-1">#1</div>
+        <div class="movie-info">
+          <h4>The Shawshank Redemption</h4>
+          <p>Frank Darabont • 1994</p>
+        </div>
+        <div class="movie-rating">
+          <i class="fas fa-star"></i>
+          <span>9.3</span>
+        </div>
+      </li>
+      <li class="movie-item">
+        <div class="movie-rank-icon rank-2">#2</div>
+        <div class="movie-info">
+          <h4>The Godfather</h4>
+          <p>Francis Ford Coppola • 1972</p>
+        </div>
+        <div class="movie-rating">
+          <i class="fas fa-star"></i>
+          <span>9.2</span>
+        </div>
+      </li>
+      <li class="movie-item">
+        <div class="movie-rank-icon rank-3">#3</div>
+        <div class="movie-info">
+          <h4>The Dark Knight</h4>
+          <p>Christopher Nolan • 2008</p>
+        </div>
+        <div class="movie-rating">
+          <i class="fas fa-star"></i>
+          <span>9.0</span>
+        </div>
+      </li>
+      <li class="movie-item">
+        <div class="movie-rank-icon rank-4">#4</div>
+        <div class="movie-info">
+          <h4>Pulp Fiction</h4>
+          <p>Quentin Tarantino • 1994</p>
+        </div>
+        <div class="movie-rating">
+          <i class="fas fa-star"></i>
+          <span>8.9</span>
+        </div>
+      </li>
+      <li class="movie-item">
+        <div class="movie-rank-icon rank-5">#5</div>
+        <div class="movie-info">
+          <h4>Forrest Gump</h4>
+          <p>Robert Zemeckis • 1994</p>
+        </div>
+        <div class="movie-rating">
+          <i class="fas fa-star"></i>
+          <span>8.8</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+
+<%- include ('partials/footer.ejs') %>
